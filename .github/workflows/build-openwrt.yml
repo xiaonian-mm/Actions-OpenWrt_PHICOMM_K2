@@ -270,13 +270,13 @@ jobs:
         # CONFIG_PACKAGE_luci-app-sqm is not set
         # CONFIG_PACKAGE_luci-app-squid is not set
         # CONFIG_PACKAGE_luci-app-ssr-libev-server is not set
-         CONFIG_PACKAGE_luci-app-ssr-plus=y
-         CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks=y
+        # CONFIG_PACKAGE_luci-app-ssr-plus=y
+        # CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks=y
         # CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_V2ray is not set
         # CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Trojan is not set
         # CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Kcptun is not set
         # CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_ShadowsocksR_Server is not set
-         CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_ShadowsocksR_Socks=y
+        # CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_ShadowsocksR_Socks=y
         # CONFIG_PACKAGE_luci-app-ssr-python-pro-server is not set
         # CONFIG_PACKAGE_luci-app-ssrserver-python is not set
         # CONFIG_PACKAGE_luci-app-statistics is not set
@@ -309,10 +309,10 @@ jobs:
         # CONFIG_PACKAGE_luci-app-zerotier is not set
         EOF
         # LuCI主题:
-        # cat >> .config <<EOF
-        # CONFIG_PACKAGE_luci-theme-argon=y
+         cat >> .config <<EOF
+         CONFIG_PACKAGE_luci-theme-argon=y
         # CONFIG_PACKAGE_luci-theme-netgear=y
-        # EOF
+         EOF
         # 常用软件包:
         # cat >> .config <<EOF
         # CONFIG_PACKAGE_curl=y
