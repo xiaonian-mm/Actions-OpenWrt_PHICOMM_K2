@@ -67,7 +67,7 @@ jobs:
         git clone https://github.com/Kinodi/luci-theme-atmaterial openwrt/package/luci-theme-atmaterial
         git clone https://github.com/jerrykuku/luci-theme-argon openwrt/package/luci-theme-argon
         git clone https://github.com/Lienol/openwrt-package openwrt/package/openwrt-package
-        git clone -b lede https://github.com/pymumu/luci-app-smartdns openwrt/package/luci-app-smartdns
+        # git clone -b lede https://github.com/pymumu/luci-app-smartdns openwrt/package/luci-app-smartdns
     - name: Update feeds
       run: cd openwrt && ./scripts/feeds update -a
 
@@ -264,19 +264,19 @@ jobs:
         # CONFIG_PACKAGE_luci-app-shairplay is not set
         # CONFIG_PACKAGE_luci-app-siitwizard is not set
         # CONFIG_PACKAGE_luci-app-simple-adblock is not set
-        CONFIG_PACKAGE_luci-app-smartdns=y
+        # CONFIG_PACKAGE_luci-app-smartdns=y
         # CONFIG_PACKAGE_luci-app-softethervpn is not set
         # CONFIG_PACKAGE_luci-app-splash is not set
         # CONFIG_PACKAGE_luci-app-sqm is not set
         # CONFIG_PACKAGE_luci-app-squid is not set
         # CONFIG_PACKAGE_luci-app-ssr-libev-server is not set
-        # CONFIG_PACKAGE_luci-app-ssr-plus=y
-        # CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks=y
+         CONFIG_PACKAGE_luci-app-ssr-plus=y
+         CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks=y
         # CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_V2ray is not set
         # CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Trojan is not set
         # CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Kcptun is not set
         # CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_ShadowsocksR_Server is not set
-        # CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_ShadowsocksR_Socks=y
+         CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_ShadowsocksR_Socks=y
         # CONFIG_PACKAGE_luci-app-ssr-python-pro-server is not set
         # CONFIG_PACKAGE_luci-app-ssrserver-python is not set
         # CONFIG_PACKAGE_luci-app-statistics is not set
@@ -291,7 +291,7 @@ jobs:
         # CONFIG_PACKAGE_luci-app-uhttpd is not set
         # CONFIG_PACKAGE_luci-app-unblockmusic is not set
         # CONFIG_PACKAGE_luci-app-unbound is not set
-        CONFIG_PACKAGE_luci-app-upnp=y
+        # CONFIG_PACKAGE_luci-app-upnp=y
         # CONFIG_PACKAGE_luci-app-usb-printer is not set
         # CONFIG_PACKAGE_luci-app-v2ray-server is not set
         # CONFIG_PACKAGE_luci-app-verysync is not set
@@ -321,7 +321,7 @@ jobs:
         # CONFIG_PACKAGE_screen=y
         # CONFIG_PACKAGE_tree=y
         # CONFIG_PACKAGE_vim-fuller=y
-        # CONFIG_PACKAGE_wget=y
+         CONFIG_PACKAGE_wget=y
         # EOF
         # 取消编译VMware镜像以及镜像填充 (不要删除被缩进的注释符号):
         # cat >> .config <<EOF
