@@ -69,8 +69,10 @@ jobs:
         git clone https://github.com/Lienol/openwrt-package openwrt/package/openwrt-package
         # git clone -b lede https://github.com/pymumu/luci-app-smartdns openwrt/package/luci-app-smartdns
         git clone https://github.com/maxlicheng/luci-app-ssr-plus openwrt/package/luci-app-ssr-plus
-        git clone https://github.com/kenzok8/openwrt-packages openwrt/package/
-        git clone https://github.com/kenzok8/small openwrt/package/
+        cd openwrt/package/
+        git clone https://github.com/kenzok8/openwrt-packages.git
+        git clone https://github.com/kenzok8/small.git 
+        cd ..
     - name: Update feeds
       run: cd openwrt && ./scripts/feeds update -a
 
