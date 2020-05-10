@@ -295,7 +295,7 @@ jobs:
         # CONFIG_PACKAGE_luci-app-usb-printer is not set
         # CONFIG_PACKAGE_luci-app-v2ray-server is not set
         # CONFIG_PACKAGE_luci-app-verysync is not set
-        # CONFIG_PACKAGE_luci-app-vlmcsd is not set
+        CONFIG_PACKAGE_luci-app-vlmcsd is not set
         # CONFIG_PACKAGE_luci-app-vnstat is not set
         # CONFIG_PACKAGE_luci-app-vpnbypass is not set
         # CONFIG_PACKAGE_luci-app-vsftpd is not set
@@ -357,6 +357,6 @@ jobs:
     - name: Upload artifact
       uses: actions/upload-artifact@master
       with:
-        name: OpenWrt phicomm k2
+        name: OpenWrt phicomm k2 withoutSS
         path: ./openwrt/artifact/
 
