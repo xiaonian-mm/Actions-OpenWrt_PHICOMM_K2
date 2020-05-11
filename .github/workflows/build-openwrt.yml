@@ -67,6 +67,7 @@ jobs:
         git clone https://github.com/Kinodi/luci-theme-atmaterial openwrt/package/luci-theme-atmaterial
         git clone https://github.com/jerrykuku/luci-theme-argon openwrt/package/luci-theme-argon
         git clone https://github.com/Lienol/openwrt-package openwrt/package/openwrt-package
+        git clone https://github.com/maxlicheng/luci-app-ssr-plus openwrt/package/luci-app-ssr-plus
     - name: Update feeds
       run: cd openwrt && ./scripts/feeds update -a
 
