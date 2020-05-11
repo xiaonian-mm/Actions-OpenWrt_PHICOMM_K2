@@ -64,6 +64,13 @@ jobs:
       run: |
         git clone https://github.com/kenzok8/openwrt-packages openwrt/package/openwrt-packages
         git clone https://github.com/kenzok8/small openwrt/package/small
+          - name: add 16M Config
+    - name: add 16M config
+      run: |
+           cd openwrt
+           wget -P ./target/linux/ramips/image https://github.com/Carrjiang/Actions-OpenWrt_PHICOMM_K2/raw/master/mt7620.mk -O mt7620.mk
+           wget -P ./target/linux/ramips/dts https://github.com/Carrjiang/Actions-OpenWrt_PHICOMM_K2/raw/master/mt7620a_phicomm_psg1218.dtsi -O mt7620a_phicomm_psg1218.dtsi
+           
     - name: Update feeds
       run: cd openwrt && ./scripts/feeds update -a
 
@@ -331,11 +338,6 @@ jobs:
         cd openwrt && make download -j8
         find dl -size -1024c -exec ls -l {} \;
         find dl -size -1024c -exec rm -f {} \;
-        
-    - name: add 16M Config
-      run: |
-           wget -P openwrt/target/linux/ramips/image https://github.com/Carrjiang/Actions-OpenWrt_PHICOMM_K2/raw/master/mt7620.mk -O mt7620.mk
-           wget -P openwrt/target/linux/ramips/dts https://github.com/Carrjiang/Actions-OpenWrt_PHICOMM_K2/raw/master/mt7620a_phicomm_psg1218.dtsi -O mt7620a_phicomm_psg1218.dtsi
            
     - name: Build
       run: |
