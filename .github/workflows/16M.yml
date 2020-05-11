@@ -64,7 +64,7 @@ jobs:
       run: |
         git clone https://github.com/kenzok8/openwrt-packages openwrt/package/openwrt-packages
         git clone https://github.com/kenzok8/small openwrt/package/small
-          - name: add 16M Config
+        
     - name: add 16M config
       run: |
            cd openwrt
