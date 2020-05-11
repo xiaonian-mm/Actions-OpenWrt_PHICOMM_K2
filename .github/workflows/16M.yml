@@ -72,10 +72,10 @@ jobs:
 
     - name: add 16M Config
       run: |
-           cd openwrt\target\linux\ramips\image && rm -rf mt7620.mk
-           wget https://github.com/Carrjiang/Actions-OpenWrt_PHICOMM_K2/raw/master/mt7620.mk
-           cd openwrt\target\linux\ramips\dts && rm -rf mt7620a_phicomm_psg1218.dtsi
-           wget https://github.com/Carrjiang/Actions-OpenWrt_PHICOMM_K2/raw/master/mt7620a_phicomm_psg1218.dtsi
+           cd openwrt/target/linux/ramips/image && rm -rf mt7620.mk
+           wget https://github.com/Carrjiang/Actions-OpenWrt_PHICOMM_K2/raw/master/mt7620.mk -O mt7620.mk
+           cd openwrt/target/linux/ramips/dts && rm -rf mt7620a_phicomm_psg1218.dtsi
+           wget https://github.com/Carrjiang/Actions-OpenWrt_PHICOMM_K2/raw/master/mt7620a_phicomm_psg1218.dtsi -O mt7620a_phicomm_psg1218.dtsi
            
     - name: Load custom configuration
       run: |
