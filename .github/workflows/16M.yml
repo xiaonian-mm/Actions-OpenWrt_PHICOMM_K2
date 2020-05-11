@@ -69,13 +69,6 @@ jobs:
 
     - name: Install feeds
       run: cd openwrt && ./scripts/feeds install -a
-
-    - name: add 16M Config
-      run: |
-           cd openwrt/target/linux/ramips/image && rm -rf mt7620.mk
-           wget https://github.com/Carrjiang/Actions-OpenWrt_PHICOMM_K2/raw/master/mt7620.mk -O mt7620.mk
-           cd openwrt/target/linux/ramips/dts && rm -rf mt7620a_phicomm_psg1218.dtsi
-           wget https://github.com/Carrjiang/Actions-OpenWrt_PHICOMM_K2/raw/master/mt7620a_phicomm_psg1218.dtsi -O mt7620a_phicomm_psg1218.dtsi
            
     - name: Load custom configuration
       run: |
@@ -332,13 +325,20 @@ jobs:
         # 
         sed -i 's/^[ \t]*//g' ./.config
         make defconfig
-
+      
     - name: Download package
       run: |
         cd openwrt && make download -j8
         find dl -size -1024c -exec ls -l {} \;
         find dl -size -1024c -exec rm -f {} \;
-
+        
+    - name: add 16M Config
+      run: |
+           cd openwrt/target/linux/ramips/image && rm -rf mt7620.mk
+           wget https://github.com/Carrjiang/Actions-OpenWrt_PHICOMM_K2/raw/master/mt7620.mk -O mt7620.mk
+           cd openwrt/target/linux/ramips/dts && rm -rf mt7620a_phicomm_psg1218.dtsi
+           wget https://github.com/Carrjiang/Actions-OpenWrt_PHICOMM_K2/raw/master/mt7620a_phicomm_psg1218.dtsi -O mt7620a_phicomm_psg1218.dtsi
+           
     - name: Build
       run: |
         cd openwrt
