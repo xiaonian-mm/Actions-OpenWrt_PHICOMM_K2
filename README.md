@@ -15,3 +15,4 @@
 
 - 修改设置只需按照[KFERMercer](https://github.com/KFERMercer/OpenWrt-CI)源码中的说明即可
 - 详细教程参照P3TERX大神的博客(https://p3terx.com/archives/build-openwrt-with-github-actions.html)
+点击Star可自动运行编译，可在Actions查看编译结果
